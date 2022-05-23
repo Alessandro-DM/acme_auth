@@ -4,6 +4,7 @@ app.use(express.json());
 const { models: { User }} = require('./db');
 const path = require('path');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 app.get('/', (req, res)=> res.sendFile(path.join(__dirname, 'index.html')));
 
